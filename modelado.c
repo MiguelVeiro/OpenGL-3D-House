@@ -102,7 +102,7 @@ void zonaCubos(float x1, float y1, float z1, float x2, float y2, float z2)
 	float inc_z = 0.0;
 
 	// Nos movemos a las coordenadas de inicio
-	glTranslatef(x1, y1, z1);
+	glTranslatef(x1, y1, -z1);
 	
 	// Nos vamos moviendo por el eje X
 	for (xTemp = x1; xTemp <= x2; xTemp = xTemp + 1.0)
@@ -112,8 +112,23 @@ void zonaCubos(float x1, float y1, float z1, float x2, float y2, float z2)
 
 		for (yTemp = y1; yTemp <= y2; yTemp = yTemp + 1.0)
 		{
-			// Dibujamos el cubo
-			igSolidCube();
+			// Reseteamos los pasos dados en el eje Z
+			inc_z = 0.0;
+
+			for (zTemp = z1; zTemp <= z2; zTemp = zTemp + 1.0)
+			{
+				// Dibujamos el cubo
+				igSolidCube();
+
+				// Avanzamos una posición en el eje Z (hacia atrás)
+				glTranslatef(0.0, 0.0, -1.0);
+
+				// Anotamos el paso en el eje Z
+				inc_z -= 1.0;
+			}
+
+			// Deshacemos el decremento en el eje Z
+			glTranslatef(0.0, 0.0, -inc_z);
 
 			// Avanzamos una posición en el eje Y
 			glTranslatef(0.0, 1.0, 0.0);
@@ -135,7 +150,7 @@ void zonaCubos(float x1, float y1, float z1, float x2, float y2, float z2)
 	glTranslatef(-inc_x, 0.0, 0.0);
 
 	// Deshacemos el incremento inicial, para volver al origen
-	glTranslatef(-x1, -y1, -z1);
+	glTranslatef(-x1, -y1, z1);
 }
 
 /******************************************************************************************/
@@ -159,14 +174,20 @@ void CreaEscena(void)
 			//glScalef(20, 20, 20);
 			//SemiEsfera();
 			//glColor3f(0.5, 0.5, 0.25);
-			textura4();
+			textura0();
 			//glScalef(0, 0, 0);
 			//igSolidSphere(20,20);
 			//igSolidCube();
 			//glTranslatef(1.0, 0.0, 0.0);
 			//igSolidCube();
-			zonaCubos(1.0, 0.0, 0.0, 1.0, 2.0, 0.0);
-			zonaCubos(10.0, 0.0, 0.0, 20.0, 0.0, 0.0);
+			zonaCubos(
+				1.0, 0.0, 0.0,
+				1.0, 2.0, 5.0
+			);
+			zonaCubos(
+				3.0, 0.0, 0.0,
+				6.0, 3.0, 3.0
+			);
 			textura0();
 			igSolidCube();
 
