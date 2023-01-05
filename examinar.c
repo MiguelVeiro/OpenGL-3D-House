@@ -239,7 +239,7 @@ void IniciaOpenGL (void)
 	IniciaLuces();
 
 	/* Inicia los materiales */
-	IniciaMaterial();
+	//IniciaMaterial();
 }
 
 

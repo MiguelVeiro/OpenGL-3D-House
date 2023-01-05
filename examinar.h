@@ -17,7 +17,7 @@
 #define FLY 3
 
 /* Variables Globales del modulo */
-int VentanaAncho = 500, VentanaAlto = 500; /* Tamanyo de la ventana */
+int VentanaAncho = 800, VentanaAlto = 800; /* Tamanyo de la ventana */
 int VentanaX = 100, VentanaY = 100; /* Posicion de la ventana */
 GLdouble  alfa = 0.0, beta = 0.0, gamma=0.0, z=0.0;
 GLuint cuadrica;

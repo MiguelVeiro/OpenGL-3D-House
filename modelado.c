@@ -91,57 +91,51 @@ void SemiEsfera()
 	glPopMatrix();
 }
 
-void ZonaCubos(x1, y1, z1, x2, y2, z2)
+void zonaCubos(float x1, float y1, float z1, float x2, float y2, float z2)
 {
-	//float xTemp = x1;
-	//float yTemp = y1;
-	//float zTemp = z1;
+	float xTemp = 0.0;
+	float yTemp = 0.0;
+	float zTemp = 0.0;
 
-	float xTemp, yTemp, zTemp;
-	float inc_x, inc_y, inc_z = 0.0;
+	float inc_x = 0.0;
+	float inc_y = 0.0;
+	float inc_z = 0.0;
 
 	// Nos movemos a las coordenadas de inicio
 	glTranslatef(x1, y1, z1);
-
-	for (xTemp = x1; xTemp <= x2; xTemp += 1.0)
+	
+	// Nos vamos moviendo por el eje X
+	for (xTemp = x1; xTemp <= x2; xTemp = xTemp + 1.0)
 	{
-		for (yTemp = y1; yTemp <= y2; yTemp += 1.0)
+		// Reseteamos los pasos dados en el eje Y
+		inc_y = 0.0;
+
+		for (yTemp = y1; yTemp <= y2; yTemp = yTemp + 1.0)
 		{
-			for (zTemp = z1; zTemp <= z2; zTemp += 1.0)
-			{
-				// Pintamos
-				igSolidCube();
+			// Dibujamos el cubo
+			igSolidCube();
 
-				// Nos movemos en el eje Z
-				glTranslatef(0.0, 0.0, 1.0);
+			// Avanzamos una posición en el eje Y
+			glTranslatef(0.0, 1.0, 0.0);
 
-				// Guardamos el paso
-				inc_z += 1.0;
-			}
-
-			// Retrocedemos en el eje Z lo que avanzamos antes
-			glTranslatef(0.0, 0.0, -inc_z);
-
-			// Nos movemos en el eje Y
-			glTranslate(0.0, 1.0, 0.0);
+			// Anotamos el paso en el eje Y
+			inc_y += 1.0;
 		}
 
-		// Nos movemos en el eje X
+		// Deshacemos el incremento en el eje Y
+		glTranslatef(0.0, -inc_y, 0.0);
+
+		// Avanzamos una posición en el eje X
 		glTranslatef(1.0, 0.0, 0.0);
+
+		// Anotamos el paso en el eje X
+		inc_x += 1.0;
 	}
-	// Nos movemos de vuelta al principio
-	glTranslatef(-x2, -y2, -z2);
+	// Deshacemos el incremento en el eje X
+	glTranslatef(-inc_x, 0.0, 0.0);
 
-	/*while (xTemp <= x2 && yTemp <= y2 && zTemp <= z2)
-	{
-		if (xTemp <= 2)
-		{
-			xTemp += 1;
-
-		}
-		igSolidCube();
-	}*/
-
+	// Deshacemos el incremento inicial, para volver al origen
+	glTranslatef(-x1, -y1, -z1);
 }
 
 /******************************************************************************************/
@@ -158,19 +152,23 @@ void CreaEscena(void)
 		glNewList (escena, GL_COMPILE);
 		glPushMatrix();
 
+			glScalef(0.2, 0.2, 0.2);
 			textura0();
 			SueloSolid();
 			textura4();
 			//glScalef(20, 20, 20);
-			SemiEsfera();
+			//SemiEsfera();
 			//glColor3f(0.5, 0.5, 0.25);
-			textura2();
+			textura4();
 			//glScalef(0, 0, 0);
 			//igSolidSphere(20,20);
 			//igSolidCube();
 			//glTranslatef(1.0, 0.0, 0.0);
 			//igSolidCube();
-			ZonaCubos(0.0, 0.0, 0.0, 2.0, 0.0, 0.0);
+			zonaCubos(1.0, 0.0, 0.0, 1.0, 2.0, 0.0);
+			zonaCubos(10.0, 0.0, 0.0, 20.0, 0.0, 0.0);
+			textura0();
+			igSolidCube();
 
 		glPopMatrix();
 		glEndList ();

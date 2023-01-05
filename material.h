@@ -28,16 +28,22 @@ void Cobre (void);
 
 /* Lee una imagen de textura en formato tga */
 void leerTextura (char *fichero, int num);
+
 void initTextura0(char *fichero);
 void textura0(void);
+
 void initTextura1(char *fichero);
 void textura1(void);
+
 void initTextura2(char* fichero);
 void textura2(void);
+
 void initTextura2(char* fichero);
 void textura3(void);
+
 void initTextura3(char* fichero);
 void textura3(void);
+
 void initTextura4(char* fichero);
 void textura4(void);
 
