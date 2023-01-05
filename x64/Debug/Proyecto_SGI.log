@@ -1,0 +1,21 @@
+﻿  examinar.c
+C:\Miguel\Clase\Universidad\Máster 1o\Sistemas Gráficos Interactivos\Proyecto_SGI\examinar.c(271,2): warning C4013: 'CreaEscena' sin definir; se supone que extern devuelve como resultado int
+  glig.c
+  luces.c
+  material.c
+  modelado.c
+  Generando código...
+examinar.obj : error LNK2019: símbolo externo __imp___glutInitWithExit sin resolver al que se hace referencia en la función glutInit_ATEXIT_HACK
+examinar.obj : error LNK2019: símbolo externo __imp_glutInitDisplayMode sin resolver al que se hace referencia en la función AbreVentana
+examinar.obj : error LNK2019: símbolo externo __imp_glutInitWindowPosition sin resolver al que se hace referencia en la función AbreVentana
+examinar.obj : error LNK2019: símbolo externo __imp_glutInitWindowSize sin resolver al que se hace referencia en la función AbreVentana
+examinar.obj : error LNK2019: símbolo externo __imp_glutMainLoop sin resolver al que se hace referencia en la función main
+examinar.obj : error LNK2019: símbolo externo __imp___glutCreateWindowWithExit sin resolver al que se hace referencia en la función glutCreateWindow_ATEXIT_HACK
+examinar.obj : error LNK2019: símbolo externo __imp_glutPostRedisplay sin resolver al que se hace referencia en la función TecladoAmpliado
+examinar.obj : error LNK2019: símbolo externo __imp_glutSwapBuffers sin resolver al que se hace referencia en la función Dibuja
+examinar.obj : error LNK2019: símbolo externo __imp_glutDisplayFunc sin resolver al que se hace referencia en la función AbreVentana
+examinar.obj : error LNK2019: símbolo externo __imp_glutReshapeFunc sin resolver al que se hace referencia en la función AbreVentana
+examinar.obj : error LNK2019: símbolo externo __imp_glutKeyboardFunc sin resolver al que se hace referencia en la función IniciaFuncionesCallback
+examinar.obj : error LNK2019: símbolo externo __imp_glutSpecialFunc sin resolver al que se hace referencia en la función IniciaFuncionesCallback
+glut32.lib : warning LNK4272: el tipo de máquina de biblioteca 'x86' está en conflicto con el tipo de máquina de destino 'x64'
+C:\Miguel\Clase\Universidad\Máster 1o\Sistemas Gráficos Interactivos\Proyecto_SGI\x64\Debug\Proyecto_SGI.exe : fatal error LNK1120: 12 externos sin resolver

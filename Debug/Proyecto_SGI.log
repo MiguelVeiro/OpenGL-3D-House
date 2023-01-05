@@ -1,0 +1,9 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: El directorio intermedio (Debug\) contiene archivos compartidos de otro proyecto (SGI_10.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  examinar.c
+C:\Miguel\Clase\Universidad\Máster 1o\Sistemas Gráficos Interactivos\Proyecto_SGI\examinar.c(271,2): warning C4013: 'CreaEscena' sin definir; se supone que extern devuelve como resultado int
+  glig.c
+  luces.c
+  material.c
+  modelado.c
+  Generando código...
+  Proyecto_SGI.vcxproj -> C:\Miguel\Clase\Universidad\Máster 1o\Sistemas Gráficos Interactivos\Proyecto_SGI\Debug\Proyecto_SGI.exe
