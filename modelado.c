@@ -80,7 +80,8 @@ void SueloSolid(void)
     glPopMatrix();
 }
 
-void SemiEsfera() {
+void SemiEsfera()
+{
 	glPushMatrix();
 		glFrontFace(GL_CCW); // Defino sentido antihorario porque quiero ver las cara de dentro
 							 // de la esfera que me van a recubrir la escena
@@ -88,6 +89,59 @@ void SemiEsfera() {
 		igSolidSemiSphere(20,20);
 		glFrontFace(GL_CW); // El resto de objetos se pintan en sentido horario
 	glPopMatrix();
+}
+
+void ZonaCubos(x1, y1, z1, x2, y2, z2)
+{
+	//float xTemp = x1;
+	//float yTemp = y1;
+	//float zTemp = z1;
+
+	float xTemp, yTemp, zTemp;
+	float inc_x, inc_y, inc_z = 0.0;
+
+	// Nos movemos a las coordenadas de inicio
+	glTranslatef(x1, y1, z1);
+
+	for (xTemp = x1; xTemp <= x2; xTemp += 1.0)
+	{
+		for (yTemp = y1; yTemp <= y2; yTemp += 1.0)
+		{
+			for (zTemp = z1; zTemp <= z2; zTemp += 1.0)
+			{
+				// Pintamos
+				igSolidCube();
+
+				// Nos movemos en el eje Z
+				glTranslatef(0.0, 0.0, 1.0);
+
+				// Guardamos el paso
+				inc_z += 1.0;
+			}
+
+			// Retrocedemos en el eje Z lo que avanzamos antes
+			glTranslatef(0.0, 0.0, -inc_z);
+
+			// Nos movemos en el eje Y
+			glTranslate(0.0, 1.0, 0.0);
+		}
+
+		// Nos movemos en el eje X
+		glTranslatef(1.0, 0.0, 0.0);
+	}
+	// Nos movemos de vuelta al principio
+	glTranslatef(-x2, -y2, -z2);
+
+	/*while (xTemp <= x2 && yTemp <= y2 && zTemp <= z2)
+	{
+		if (xTemp <= 2)
+		{
+			xTemp += 1;
+
+		}
+		igSolidCube();
+	}*/
+
 }
 
 /******************************************************************************************/
@@ -113,9 +167,10 @@ void CreaEscena(void)
 			textura2();
 			//glScalef(0, 0, 0);
 			//igSolidSphere(20,20);
-			igSolidCube();
-			glTranslatef(1.0, 0.0, 0.0);
-			igSolidCube();
+			//igSolidCube();
+			//glTranslatef(1.0, 0.0, 0.0);
+			//igSolidCube();
+			ZonaCubos(0.0, 0.0, 0.0, 2.0, 0.0, 0.0);
 
 		glPopMatrix();
 		glEndList ();
