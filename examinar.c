@@ -104,6 +104,7 @@ void TecladoAmpliado (int tecla, int x, int y)
 				iy = oy + PASO * sin (grad2rad (beta));
 			}
 			break;
+
 		case GLUT_KEY_UP : /* Pulsacion cursor arriba del teclado ampliado */
 			if (modo == WALK || modo == FLY)
 			{
@@ -266,6 +267,7 @@ int main(int numArgumentos, char ** listaArgumentos)
 	initTextura2("brown_wool.tga");
 	initTextura3("leaves.tga");
 	initTextura4("sky.tga");
+	initTextura5("bookshelf.tga");
 
 	/* Creo la display list de la escena */
 	CreaEscena();
