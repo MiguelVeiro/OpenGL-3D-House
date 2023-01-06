@@ -30,7 +30,7 @@ void TamanyoVentana (GLsizei ancho, GLsizei alto)
     /* Definicion de la vista */
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-	gluPerspective (60.0, (GLdouble)alto/(GLdouble)ancho, 1.0, 400.0);
+	gluPerspective (60.0, (GLdouble)alto/(GLdouble)ancho, 0.01, 400.0);
 }
 
 /******************************************************************************************/
