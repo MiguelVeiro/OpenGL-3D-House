@@ -506,6 +506,340 @@ void CreaEscena(void)
 				22.0, 4.0, 17.0
 			);
 
+			// Pilares piscina
+			zonaCubos(
+				22.0, 1.0, 10.0,
+				22.0, 3.0, 10.0
+			);
+			zonaCubos(
+				22.0, 1.0, 17.0,
+				22.0, 3.0, 17.0
+			);
+
+			// Jardín exterior
+			textura3();
+			zonaCubos(
+				23.0, 0.0, 5.0,
+				23.0, 1.0, 19.0
+			);
+			zonaCubos(
+				13.0, 0.0, 19.0,
+				22.0, 1.0, 19.0
+			);
+			zonaCubos(
+				2.0, 0.0, 19.0,
+				6.0, 1.0, 19.0
+			);
+			zonaCubos(
+				0.0, 0.0, 4.0,
+				0.0, 1.0, 8.0
+			);
+			zonaCubos(
+				0.0, 0.0, 11.0,
+				0.0, 1.0, 15.0
+			);
+
+			// Pared final primer piso
+			textura0();
+			zonaCubos(
+				13.0, 5.0, 18.0,
+				14.0, 7.0, 18.0
+			);
+			zonaCubos(
+				5.0, 6.0, 18.0,
+				9.0, 6.0, 18.0
+			);
+			zonaCubos(
+				3.0, 7.0, 18.0,
+				9.0, 7.0, 18.0
+			);
+			zonaCubos(
+				14.0, 4.0, 18.0,
+				14.0, 4.0, 18.0
+			);
+			textura1();
+			zonaCubos(
+				15.0, 5.0, 17.0,
+				22.0, 7.0, 17.0
+			);
+
+			// Pared derecha primer piso
+			zonaCubos(
+				22.0, 5.0, 11.0,
+				22.0, 7.0, 12.0
+			);
+			zonaCubos(
+				22.0, 5.0, 13.0,
+				22.0, 5.0, 15.0
+			);
+			zonaCubos(
+				22.0, 5.0, 16.0,
+				22.0, 7.0, 16.0
+			);
+
+			// Pared frontal primer piso
+			zonaCubos(
+				15.0, 5.0, 11.0,
+				16.0, 7.0, 11.0
+			);
+			zonaCubos(
+				17.0, 5.0, 11.0,
+				20.0, 5.0, 11.0
+			);
+			zonaCubos(
+				21.0, 5.0, 11.0,
+				22.0, 7.0, 11.0
+			);
+
+			// Pilares primer piso
+			textura0();
+			zonaCubos(
+				2.0, 5.0, 8.0,
+				2.0, 7.0, 8.0
+			);
+			zonaCubos(
+				6.0, 5.0, 8.0,
+				6.0, 7.0, 8.0
+			);
+			zonaCubos(
+				11.0, 5.0, 10.0,
+				11.0, 7.0, 10.0
+			);
+			zonaCubos(
+				14.0, 5.0, 11.0,
+				14.0, 7.0, 11.0
+			);
+
+			// Pared izquierda primer piso
+			zonaCubos(
+				2.0, 5.0, 11.0,
+				2.0, 7.0, 18.0
+			);
+
+			// Suelo segundo piso
+			textura1();
+			zonaCubos(
+				2.0, 8.0, 8.0,
+				6.0, 8.0, 16.0
+			);
+			zonaCubos(
+				7.0, 8.0, 8.0,
+				10.0, 8.0, 17.0
+			);
+			zonaCubos(
+				11.0, 8.0, 8.0,
+				11.0, 8.0, 9.0
+			);
+
+			// Pared izquierda segundo piso
+			textura0();
+			zonaCubos(
+				1.0, 8.0, 7.0,
+				1.0, 12.0, 9.0
+			);
+			zonaCubos(
+				1.0, 8.0, 10.0,
+				1.0, 9.0, 11.0
+			);
+			zonaCubos(
+				1.0, 12.0, 10.0,
+				1.0, 12.0, 11.0
+			);
+			zonaCubos(
+				1.0, 8.0, 12.0,
+				1.0, 12.0, 18.0
+			);
+
+			// Marco suelo segundo piso
+			zonaCubos(
+				2.0, 8.0, 7.0,
+				12.0, 8.0, 7.0
+			);
+			zonaCubos(
+				11.0, 8.0, 10.0,
+				18.0, 8.0, 10.0
+			);
+			zonaCubos(
+				11.0, 8.0, 11.0,
+				11.0, 8.0, 17.0
+			);
+			zonaCubos(
+				2.0, 8.0, 18.0,
+				23.0, 8.0, 18.0
+			);
+			zonaCubos(
+				19.0, 8.0, 10.0,
+				23.0, 8.0, 17.0
+			);
+			zonaCubos(
+				12.0, 8.0, 8.0,
+				12.0, 8.0, 9.0
+			);
+
+			// Jardín superior
+			textura3();
+			zonaCubos(
+				12.0, 8.0, 11.0,
+				18.0, 8.0, 17.0
+			);
+
+			// Pared trasera segundo piso
+			textura0();
+			zonaCubos(
+				2.0, 9.0, 18.0,
+				3.0, 12.0, 18.0
+			);
+			zonaCubos(
+				4.0, 9.0, 18.0,
+				6.0, 9.0, 18.0
+			);
+			zonaCubos(
+				4.0, 11.0, 18.0,
+				6.0, 12.0, 18.0
+			);
+			zonaCubos(
+				7.0, 9.0, 18.0,
+				7.0, 12.0, 18.0
+			);
+			zonaCubos(
+				8.0, 9.0, 18.0,
+				9.0, 9.0, 18.0
+			);
+			zonaCubos(
+				8.0, 11.0, 18.0,
+				9.0, 12.0, 18.0
+			);
+			zonaCubos(
+				10.0, 9.0, 18.0,
+				11.0, 12.0, 18.0
+			);
+
+			// Separacion libreria segundo piso
+			zonaCubos(
+				4.0, 9.0, 15.0,
+				7.0, 9.0, 15.0
+			);
+			zonaCubos(
+				4.0, 11.0, 15.0,
+				7.0, 11.0, 15.0
+			);
+			zonaCubos(
+				7.0, 9.0, 16.0,
+				7.0, 9.0, 17.0
+			);
+			zonaCubos(
+				7.0, 11.0, 16.0,
+				7.0, 11.0, 17.0
+			);
+
+			// Pared y repisa de madera segundo piso frontal
+			textura1();
+			zonaCubos(
+				2.0, 9.0, 8.0,
+				3.0, 11.0, 8.0
+			);
+			zonaCubos(
+				4.0, 9.0, 8.0,
+				11.0, 9.0, 8.0
+			);
+			zonaCubos(
+				11.0, 9.0, 9.0,
+				11.0, 11.0, 13.0
+			);
+
+			// Marco jardín superior
+			zonaCubos(
+				12.0, 9.0, 11.0,
+				18.0, 9.0, 11.0
+			);
+			zonaCubos(
+				11.0, 9.0, 17.0,
+				18.0, 9.0, 17.0
+			);
+			zonaCubos(
+				11.0, 10.0, 17.0,
+				11.0, 11.0, 17.0
+			);
+
+			// Suelo tercer piso
+			textura0();
+			zonaCubos(
+				2.0, 12.0, 7.0,
+				7.0, 12.0, 15.0
+			);
+			zonaCubos(
+				8.0, 12.0, 7.0,
+				11.0, 12.0, 18.0
+			);
+			zonaCubos(
+				2.0, 12.0, 17.0,
+				7.0, 12.0, 17.0
+			);
+
+			// Pared derecha tercer piso
+			zonaCubos(
+				12.0, 12.0, 7.0,
+				12.0, 16.0, 8.0
+			);
+			zonaCubos(
+				12.0, 12.0, 8.0,
+				12.0, 12.0, 18.0
+			);
+			zonaCubos(
+				12.0, 16.0, 9.0,
+				12.0, 16.0, 18.0
+			);
+			zonaCubos(
+				12.0, 13.0, 10.0,
+				12.0, 15.0, 11.0
+			);
+			zonaCubos(
+				12.0, 13.0, 13.0,
+				12.0, 15.0, 14.0
+			);
+			zonaCubos(
+				12.0, 13.0, 16.0,
+				12.0, 15.0, 18.0
+			);
+
+			// Pared frontal tercer piso
+			textura1();
+			zonaCubos(
+				3.0, 13.0, 8.0,
+				11.0, 13.0, 8.0
+			);
+			zonaCubos(
+				10.0, 14.0, 8.0,
+				11.0, 15.0, 8.0
+			);
+
+			// Pared izquierda tercer piso
+			zonaCubos(
+				2.0, 13.0, 8.0,
+				2.0, 15.0, 11.0
+			);
+			zonaCubos(
+				2.0, 13.0, 12.0,
+				2.0, 13.0, 17.0
+			);
+
+			// Pared atras tercer piso
+			zonaCubos(
+				3.0, 13.0, 17.0,
+				11.0, 13.0, 17.0
+			);
+			zonaCubos(
+				11.0, 14.0, 17.0,
+				11.0, 15.0, 17.0
+			);
+
+			// Techo tercer piso
+			textura0();
+			zonaCubos(
+				1.0, 16.0, 7.0,
+				11.0, 16.0, 18.0
+			);
+
 		glPopMatrix();
 		glEndList ();
 	}
