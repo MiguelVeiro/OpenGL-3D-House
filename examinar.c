@@ -268,6 +268,7 @@ int main(int numArgumentos, char ** listaArgumentos)
 	initTextura3("leaves.tga");
 	initTextura4("sky.tga");
 	initTextura5("bookshelf.tga");
+	initTextura6("grass.tga");
 
 	/* Creo la display list de la escena */
 	CreaEscena();

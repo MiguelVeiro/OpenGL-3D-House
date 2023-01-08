@@ -18,7 +18,7 @@
 /******************************************************************************************/
 void IniciaLuces(void)
 {	
-	GLfloat lmodel_ambient [] = {1.0f, 1.0f, 1.0f, 1.0f};
+	GLfloat lmodel_ambient [] = {0.6f, 0.6f, 0.6f, 1.0f};
 
 	/* Parámetros del modelo de iluminación */
 
@@ -41,41 +41,14 @@ void IniciaLuces(void)
 /******************************************************************************************/
 void Luz0 (void)
 {
-	/*float luz0_posicion[] = {0.0f, 1.0f, 1.0f, 0.0f};
-	float luz0_ambiente[] = {0.2f, 0.2f, 0.2f, 1.0f};
-	float luz0_difusa[] = {0.5f, 0.5f, 0.5f, 1.0f};
-	float luz0_especular[] = {0.6f, 0.6f, 0.6f, 1.0f};
+	float luz0_posicion[] = {10.0f, 5.0f, 5.0f, 1.0f};
+	float luz0_ambiente[] = {0.0f, 0.0f, 0.0f, 1.0f};
+	float luz0_difusa[] = {1.0f, 1.0f, 1.0f, 1.0f};
+	float luz0_especular[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
 	glLightfv (GL_LIGHT0, GL_POSITION, luz0_posicion);
 	glLightfv (GL_LIGHT0, GL_AMBIENT, luz0_ambiente);
 	glLightfv (GL_LIGHT0, GL_DIFFUSE, luz0_difusa);
-	glLightfv (GL_LIGHT0, GL_SPECULAR, luz0_especular);*/
+	glLightfv (GL_LIGHT0, GL_SPECULAR, luz0_especular);
 	glEnable(GL_LIGHT0);
-}
-
-/******************************************************************************************/
-/* Define y activa la luz 1                                                               */
-/* Parametros: Ninguno                                                                    */
-/* Salida: Ninguna                                                                        */
-/******************************************************************************************/
-void Luz1 (void)
-{
-}
-
-/******************************************************************************************/
-/* Define y activa la luz 2                                                               */
-/* Parametros: Ninguno                                                                    */
-/* Salida: Ninguna                                                                        */
-/******************************************************************************************/
-void Luz2 (void)
-{
-}
-
-/******************************************************************************************/
-/* Define y activa la niebla                                                              */
-/* Parametros: Ninguno                                                                    */
-/* Salida: Ninguna                                                                        */
-/******************************************************************************************/
-void Niebla (void)
-{
 }

@@ -167,10 +167,19 @@ void CreaEscena(void)
 		glNewList (escena, GL_COMPILE);
 		glPushMatrix();
 
-			//SemiEsfera();
-			glScalef(0.3, 0.3, 0.3);
-			textura0();
-			SueloSolid();
+			// Bajada de coordenadas inicial (no tocar)
+			glTranslatef(-4.5, -3.0, -5.0);
+
+			// Cielo
+			textura4();
+			glScalef(2.0, 2.0, 2.0);
+			glRotatef(180.0f, 0.0f, 1.0f, 0.0f);
+			glTranslatef(-2.0, 0.0, 2.0);
+			SemiEsfera();
+
+			glTranslatef(2.0, 0.0, -2.0);
+			glRotatef(-180.0f, 0.0f, 1.0f, 0.0f);
+			glScalef(0.2, 0.2, 0.2);
 
 			// Bloque del principio
 			textura0();
@@ -985,6 +994,15 @@ void CreaEscena(void)
 				11.0, 13.0, 10.0,
 				11.0, 15.0, 11.0
 			);
+
+			// Hierba y suelo
+			glTranslatef(-55.0, -1.0, 55.0);
+			textura6();
+			zonaCubos(
+				0.0, 0.0, 0.0,
+				150.0, 0.0, 150.0
+			);
+			glTranslatef(55.0, 1.0, -55.0);
 
 		glPopMatrix();
 		glEndList ();
