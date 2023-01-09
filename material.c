@@ -195,3 +195,18 @@ void textura6(void)
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glEnable(GL_TEXTURE_2D);
 }
+
+void initTextura7(char* fichero)
+{
+	leerTextura(fichero, 7);
+}
+
+void textura7(void)
+{
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glTexImage2D(GL_TEXTURE_2D, 0, 4, anchoTextura, altoTextura, 0, GL_RGB, GL_UNSIGNED_BYTE, texturaInfo[7]);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+	glEnable(GL_TEXTURE_2D);
+}

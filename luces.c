@@ -41,9 +41,9 @@ void IniciaLuces(void)
 /******************************************************************************************/
 void Luz0 (void)
 {
-	float luz0_posicion[] = {10.0f, 5.0f, 5.0f, 1.0f};
+	float luz0_posicion[] = {10.0f, 5.0f, 5.0f, 0.0f};
 	float luz0_ambiente[] = {0.0f, 0.0f, 0.0f, 1.0f};
-	float luz0_difusa[] = {1.0f, 1.0f, 1.0f, 1.0f};
+	float luz0_difusa[] = {2.0f, 2.0f, 2.0f, 1.0f};
 	float luz0_especular[] = {1.0f, 1.0f, 1.0f, 1.0f};
 
 	glLightfv (GL_LIGHT0, GL_POSITION, luz0_posicion);
