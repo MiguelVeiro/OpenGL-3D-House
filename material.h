@@ -14,7 +14,7 @@
 
 #define anchoTextura	256
 #define altoTextura		256
-#define numTextura		8
+#define numTextura		9
 
 /***************** DECLARACION DE LA VARIABLES GLOBALES  *****************/
 
@@ -55,5 +55,8 @@ void textura6(void);
 
 void initTextura7(char* fichero);
 void textura7(void);
+
+void initTextura8(char* fichero);
+void textura8(void);
 
 #endif
